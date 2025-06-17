@@ -2,42 +2,72 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0f0f0f;
+  background-color: #03001a;
   color: #f5f5f5;
   line-height: 1.7;
 }
 
 /* Cabecera */
 header {
-  background: linear-gradient(to right, #ff4500, #d63031);
-  padding: 2.5rem 1rem;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  background: linear-gradient(to right, hwb(210 0% 97%), #130624);
+  padding: 1rem 2rem;
+  box-shadow: 0 .4px 20px rgb(0, 204, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
 }
-header h1 {
-  margin: 0;
-  font-size: 3rem;
-  color: #fff;
-  letter-spacing: 2px;
-}
+
+/* Título */
+
 
 /* Navegación */
 nav {
-  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
-  margin: 0 1rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
-  transition: background 0.3s, color 0.3s;
   border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
+
 nav a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffeaa7;
+  background: rgba(255, 255, 255, 0.103);
+  color: #3cff00;
 }
+
+/* Íconos sociales grandes a la derecha */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-icons a {
+  font-size: 2.25rem; /* Mitad del tamaño original */
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons .instagram { color: #fd2f96; }
+.social-icons .youtube { color: #ff2121; }
+.social-icons .linkedin { color: #297eff; }
+
+
+.social-icons a:hover {
+  color: #7bff53;
+}
+
 
 /* Contenido principal */
 main {
@@ -45,54 +75,130 @@ main {
   max-width: 960px;
   margin: auto;
 }
+
 section {
   margin-bottom: 3rem;
 }
+
 section h2 {
-  color: #ff4500;
-  border-bottom: 2px solid #ff4500;
+  color: #f7f7f7;
+  border-bottom: 2px solid rgb(0, 204, 255);
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
 
 /* Proyectos */
 .project {
-  background: #1e1e1e;
+  background: #130624;
   padding: 1.5rem;
   border-radius: 12px;
   margin-bottom: 1.5rem;
-  border-left: 6px solid #ff4500;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 6px solid rgb(0, 204, 255);
+  transition: 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease, 
+    border-left-color 0.3s ease;
 }
+
 .project:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(255, 69, 0, 0.2);
+  border-left-color: #3cff00;
+  animation: borderPulse 2s infinite; /* pulso más lento */
+  box-shadow: 0px 0px 10px #3cff00; /* luz solo abajo y derecha */
 }
+
+@keyframes borderPulse {
+  0%, 100% {
+    border-left-color: #3cff00;
+  }
+  50% {
+    border-left-color: #3cff0049;
+  }
+}
+
+
+/* Luz proyectada verde abajo y derecha */
+.project::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.project:hover::after {
+  box-shadow: 10px 10px 20px #3cff00; /* Luz proyectada solo abajo y derecha */
+}
+
+/* Pulso verde en el borde */
+@keyframes borderPulse {
+  0%, 100% {
+    border-left-color: #3cff00;
+  }
+  50% {
+    border-left-color:#3cff0041;;
+  }
+}
+
 .project h3 {
-  color: #ffa500;
+  color: #ffffff;
   margin-top: 0;
 }
+
 .project p {
   margin: 0.5rem 0 0;
 }
 
+
 /* Contacto */
 #contacto a {
-  color: #1abc9c;
+  color: #3cff00;
   text-decoration: none;
   font-weight: 600;
 }
+
 #contacto a:hover {
   text-decoration: underline;
 }
 
 /* Pie de página */
 footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #1e1e1e;
-  color: #888;
+  background: linear-gradient(to left, hwb(210 0% 97%), #130624);
+  padding: 1rem 2rem;
+  box-shadow: 0 .4px 20px rgb(0, 204, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+  color: #5e5d5e;
   font-size: 0.95rem;
-  border-top: 1px solid #333;
+
   margin-top: 2rem;
+  text-align: center;
+}
+/* Animaciones opcionales */
+.fade-in {
+  animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+
+}
+/* Logo */
+.logo {
+  max-height: 80px;
+  height: auto;
+  width: auto;
+  margin-right: 1rem;
 }
