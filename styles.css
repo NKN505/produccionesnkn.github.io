@@ -287,3 +287,26 @@ form button:hover {
   background-color: #555;
 }
 
+/* ...resto de tu CSS... */
+
+/* Botón "Volver al inicio" con mismo estilo que nav a */
+.btn-volver {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;              /* igual que nav a */
+  font-weight: 600;                  /* igual que nav a */
+  color: #fff;                      /* igual que nav a */
+  background: transparent;          /* quitar fondo gris */
+  border-radius: 6px;               /* igual que nav a */
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease; /* igual que nav a */
+  cursor: pointer;
+  border: none;                    /* sin borde */
+}
+
+.btn-volver:hover {
+  background: rgba(255, 255, 255, 0.103);
+  color: #3cff00;
+}
+
+/* ...resto de tu CSS... */
