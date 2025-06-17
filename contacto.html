@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Página de contacto de Producciones NKN - Envíanos tu consulta sobre videojuegos, modelado 3D, animación, edición o montaje de PC." />
   <title>Contacto | NKNProducciones</title>
-  <link rel="icon" type="image/png" href="images/K_ng.png">
+  <link rel="icon" type="image/png" href="images/K_ng.png" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Link a Font Awesome para los iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header>
@@ -18,6 +20,13 @@
       <a href="servicios.html">Servicios</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+
+    <!-- Bloque de iconos sociales -->
+    <div class="social-icons">
+      <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+    </div>
   </header>
 
   <main>
@@ -27,10 +36,10 @@
 
       <form action="https://formsubmit.co/nkni.producciones.dv@gmail.com" method="POST">
         <label for="nombre">Nombre y Apellidos*</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez o Estudio XYZ" required>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez o Estudio XYZ" required />
 
         <label for="email">Correo electrónico*</label>
-        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required />
 
         <label for="servicio">Servicio solicitado*</label>
         <select id="servicio" name="servicio" required>
@@ -43,14 +52,14 @@
         </select>
 
         <label for="asunto">Asunto*</label>
-        <input type="text" id="asunto" name="asunto" placeholder="Breve título del mensaje" required>
+        <input type="text" id="asunto" name="asunto" placeholder="Breve título del mensaje" required />
 
         <label for="mensaje">Descripción detallada*</label>
         <textarea id="mensaje" name="mensaje" rows="6" placeholder="Describe brevemente lo que necesitas..." required></textarea>
 
         <!-- Configuración opcional -->
-        <input type="hidden" name="_next" value="https://nkn505.github.io/produccionesnkn.github.io/gracias.html">
-        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="gracias.html" />
+        <input type="hidden" name="_captcha" value="false" />
 
         <button type="submit">Enviar solicitud</button>
       </form>
@@ -60,5 +69,7 @@
   <footer>
     <p>© 2025 NKNProducciones. Todos los derechos reservados.</p>
   </footer>
+  
+  <script src="effects.js"></script>
 </body>
 </html>
