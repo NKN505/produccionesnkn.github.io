@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Página de contacto de Producciones NKN - Envíanos tu consulta sobre videojuegos, modelado 3D, animación, edición o montaje de PC." />
+  <title>Contacto | NKNProducciones</title>
+  <link rel="icon" type="image/png" href="images/K_ng.png">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="images/NKN_letras_producciones (2).png" alt="Logo ProduccionesNKN" class="logo" />
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="portfolio-servicios.html">Portfolio y Servicios</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="contacto" class="fade-in">
+      <h2>Contacto</h2>
+      <p>¿Tienes un proyecto o necesitas ayuda? Rellena el siguiente formulario:</p>
+
+      <form action="https://formsubmit.co/nkni.producciones.dv@gmail.com" method="POST">
+        <label for="nombre">Nombre y Apellidos*</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez o Estudio XYZ" required>
+
+        <label for="email">Correo electrónico*</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+        <label for="servicio">Servicio solicitado*</label>
+        <select id="servicio" name="servicio" required>
+          <option value="">Selecciona servicio</option>
+          <option value="Videojuego">Videojuego</option>
+          <option value="Modelado 3D">Modelado 3D</option>
+          <option value="Animación 2D/3D">Animación 2D/3D</option>
+          <option value="Montaje y postproducción">Montaje, edición y postproducción</option>
+          <option value="PC">PC</option>
+        </select>
+
+        <label for="asunto">Asunto*</label>
+        <input type="text" id="asunto" name="asunto" placeholder="Breve título del mensaje" required>
+
+        <label for="mensaje">Descripción detallada*</label>
+        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Describe brevemente lo que necesitas..." required></textarea>
+
+        <!-- Configuración opcional -->
+        <input type="hidden" name="_next" value="gracias.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit">Enviar solicitud</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 NKNProducciones Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
